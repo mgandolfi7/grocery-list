@@ -5,13 +5,29 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  background: salmon;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
+body {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Rubik";
+}
 
+input {
+  font-family: "Rubik";
+  font-weight: bold;
+  border-radius: 10px;
+  height: 30px;
+}
+
+li {
+  list-style: none;
+}
 
 /******************************************
 /* ADDITIONAL STYLES

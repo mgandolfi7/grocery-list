@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grocery List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="/addBook" method="POST">
-        <input type="text" placeholder="Book Title" name="bookTitle">
-        <input type="text" placeholder="Book Author" name="bookAuthor">
-        <input type="date" placeholder="Checkout Date" name="checkoutDate">
-        <input type="submit">
+    <h1>Grocery List</h1>
+    <form action="/addItem" method="POST">
+        <input type="text" name="listItem">
+        <input type="submit" value="Add Item">
     </form>
-
+    <ul class="groceries">
+        <% for (let i = 0; i < info.length; i++) {%>
+            <li class="item">
+                <span><%= info[i].listItem %></span>
+                <span class="fa fa-trash"></span>
+            </li>
+        <% } %>
+    </ul>
     <script src="js/main.js"></script>
 
 </body>
